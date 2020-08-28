@@ -17,7 +17,6 @@ import static org.hamcrest.Matchers.equalTo;
 
 @Owner("evgdas")
 @Feature("Работа с задачами")
-
 public class IssueTest extends BaseTest {
     private int issueNumber;
     private Issue issue = new Issue();
