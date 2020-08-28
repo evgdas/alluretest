@@ -1,4 +1,4 @@
-import githubPage.model.Constans;
+import githubPage.model.Constants;
 import githubPage.model.Issue;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
