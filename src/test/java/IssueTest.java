@@ -45,7 +45,7 @@ public class IssueTest extends BaseTest {
             $("#issue_title").click();
             $("#issue_title").setValue(Constants.ISSUE_TITLE);
             $("#labels-select-menu").click();
-            $(byText(Constans.LABEL)).click();
+            $(byText(Constants.LABEL)).click();
             $("#labels-select-menu").click();
             $(byText("Submit new issue")).click();
 
