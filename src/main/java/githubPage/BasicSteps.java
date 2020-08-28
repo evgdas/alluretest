@@ -52,6 +52,7 @@ public class BasicSteps {
         issueNumber = Integer.parseInt($x("//span[contains(text(),'#')]").getText().replace("#", ""));
 
         parameter("Issue Number", issueNumber);
+        closeWebDriver();
         return this;
     }
 
