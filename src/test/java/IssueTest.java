@@ -24,8 +24,8 @@ public class IssueTest extends BaseTest {
     @Test
     @DisplayName("Создание новой задачи и проверка через API")
     public void shouldCreateNewIssue() {
-        parameter("Репозиторий", Constans.REPOSITORY);
-        parameter("Заголовок Issue", Constans.ISSUE_TITLE);
+        parameter("Репозиторий", Constants.REPOSITORY);
+        parameter("Заголовок Issue", Constants.ISSUE_TITLE);
 
         step("Логин на github", () -> {
             open("https://github.com");
@@ -35,15 +35,15 @@ public class IssueTest extends BaseTest {
             $("input[name='commit']").click();
         });
         step("Открываем главную страницу репозитария", () -> {
-            open("https://github.com" + Constans.REPOSITORY);
+            open("https://github.com" + Constants.REPOSITORY);
         });
         step("Открываем страницу с задачами", () -> {
-            $("a[href='" + Constans.REPOSITORY + "issues']").click();
+            $("a[href='" + Constants.REPOSITORY + "issues']").click();
         });
         step("Создаем новую задачу", () -> {
             $(byText("New issue'")).click();
             $("#issue_title").click();
-            $("#issue_title").setValue(Constans.ISSUE_TITLE);
+            $("#issue_title").setValue(Constants.ISSUE_TITLE);
             $("#labels-select-menu").click();
             $(byText(Constans.LABEL)).click();
             $("#labels-select-menu").click();
@@ -65,8 +65,8 @@ public class IssueTest extends BaseTest {
                     .statusCode(200)
                     .extract()
                     .as(Issue.class);
-            assertThat(issue.getTitle(), equalTo(Constans.ISSUE_TITLE));
-            assertThat(issue.getLabels().get(0).getName(), equalTo(Constans.LABEL));
+            assertThat(issue.getTitle(), equalTo(Constants.ISSUE_TITLE));
+            assertThat(issue.getLabels().get(0).getName(), equalTo(Constants.LABEL));
         });
     }
 }
