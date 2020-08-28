@@ -52,6 +52,7 @@ public class IssueTest extends BaseTest {
             //Получить номер созданной Issue:
             issueNumber = Integer.parseInt(($x("//span[contains(text(),'#')]").getText().replace("#", "")));
             parameter("Issue", issueNumber);
+            closeWebDriver();
         });
         step("Проверяем задачу через API", () -> {
             issue = given()
