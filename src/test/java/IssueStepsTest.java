@@ -17,9 +17,9 @@ public class IssueStepsTest extends BaseTest {
         steps
                 .loginGithub(TestDataReader.getLoginFromProperty(),
                         TestDataReader.getPasswordFromProperty())
-                .openRepository(Constans.REPOSITORY)
-                .openIssuePage(Constans.REPOSITORY)
-                .createNewIssue(Constans.REPOSITORY, Constans.ISSUE_TITLE, Constans.LABEL)
-                .checkIssueByApi(Constans.ISSUE_TITLE, Constans.LABEL);
+                .openRepository(Constants.REPOSITORY)
+                .openIssuePage(Constants.REPOSITORY)
+                .createNewIssue(Constants.REPOSITORY, Constants.ISSUE_TITLE, Constants.LABEL)
+                .checkIssueByApi(Constants.ISSUE_TITLE, Constants.LABEL);
     }
 }
