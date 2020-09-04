@@ -1,7 +1,7 @@
-import githubPage.model.Constans;
+import githubPage.BasicSteps;
+import githubPage.model.Constants;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
-import githubPage.BasicSteps;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import utils.TestDataReader;
